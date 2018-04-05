@@ -1,0 +1,38 @@
+Git
+	1. Git clone
+	2. Git commit
+	3. Git push
+
+Firebase
+	npm install -g firebase-tools					Install
+	
+	firebase login									Login using google
+	firebase init									Create project
+
+	firebase deploy									Upload project from dist
+
+Angular - https://angular.io/guide/quickstart
+		- https://github.com/angular/angular-cli/wiki
+	npm install -g @angular/cli						Install
+
+	ng new project-name	--style=less				Create project
+
+	cd project-name
+	ng serve										Start server
+
+	ng test											Test project
+	ng e2e
+
+	ng build --prod --build-optimize				Build project for production
+
+	ng generate [type] [name] {options}				Create item in project
+
+	Optimalize - https://angular.io/guide/deployment
+		npm install -g source-map-explorer
+		ng build --prod --sourcemaps
+		ls dist/*.bundle.js
+		node_modules/.bin/source-map-explorer dist/main.*.bundle.js
+
+npm
+	npm install -g npm-install-missing
+	npm-install-missing
