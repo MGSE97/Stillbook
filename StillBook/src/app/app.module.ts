@@ -16,6 +16,8 @@ import {
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 import { User } from 'firebase/app';
 import { ContextService } from './Services/Context/context.service';
 import { Observable } from 'rxjs/Observable';
@@ -32,6 +34,8 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { ContentComponent } from './Components/content/content.component';
 import { ArticleComponent } from './Components/article/article.component';
 import { ArticleCommentComponent } from './Components/article/article-comment/article-comment.component';
+
+import { FirebaseDatabase } from './Database/Engine/FirebaseDatabase';
 
 const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
   providers: [
@@ -63,13 +67,18 @@ const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
     FormsModule,
     HttpModule,
     AppRoutingModule,
+
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
+
     FirebaseUIModule.forRoot(firebaseUiAuthConfig),
     NgbModule.forRoot()
   ],
   providers: [
-    ContextService
+    ContextService,
+    FirebaseDatabase
   ],
   bootstrap: [AppComponent]
 })
