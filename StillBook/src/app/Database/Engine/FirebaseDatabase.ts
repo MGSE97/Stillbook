@@ -20,8 +20,8 @@ export class FirebaseDatabase implements IDatabase {
     return this.db.list(path, ref => params(ref));
   }
 
-  insert(path: string, data: any)
-  {
+  insert(path: string, data: any) {
+    console.log(path);
     this.db.list(path).push(data);
   }
 

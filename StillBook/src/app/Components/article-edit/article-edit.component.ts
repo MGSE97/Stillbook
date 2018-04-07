@@ -10,8 +10,8 @@ import { ArticleModel } from '../../Models/Article/Article';
 })
 export class ArticleEditComponent implements OnInit {
 
-  db : FirebaseDatabase;
-  c : ContextService;
+  db: FirebaseDatabase;
+  c: ContextService;
 
   constructor(database: FirebaseDatabase,
               context: ContextService) {
@@ -22,13 +22,13 @@ export class ArticleEditComponent implements OnInit {
   ngOnInit() {
   }
 
-  postArticle(text: string){
+  postArticle(text: string) {
     console.log(this.c.User);
     console.log(text);
     new ArticleModel({
       Text: text,
       CreatedOnUtc: new Date().toUTCString(),
-      Comments: {}
-    }, this.c.User, this.db).save();
+      Comments: [{}]
+    }, this.c.User, this.db).insert();
   }
 }

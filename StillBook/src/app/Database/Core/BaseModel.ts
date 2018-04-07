@@ -18,14 +18,14 @@ export class BaseModel implements IBaseModel {
   }
 
   constructor(data: any, table: string, parent: IBaseEntity, database: FirebaseDatabase) {
-    if (data.Id != null && table != null) {
+    if (data.Id != null) {
       this.Id = data.Id;
-      this.Table = table;
       this.Path = this.getPath();
       this.Reference = database.getReference(this.Path + '/' + this.Id);
-      this.db = database;
       console.log(this.Reference);
     }
+    this.Table = table;
+    this.db = database;
     this.Parent = parent;
   }
 
@@ -50,6 +50,11 @@ export class BaseModel implements IBaseModel {
         return null;
       }
     }
+  }
+
+  public insert(data: any) {
+    this.db.insert(this.getPath(), data);
+    return this;
   }
 
   public save(data: any) {

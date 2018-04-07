@@ -40,6 +40,9 @@ export class ArticleModel extends BaseModel {
       Comments: this.Comments
     };
   }
+  insert() {
+    return super.insert(this.getData());
+  }
   save() {
     return super.save(this.getData());
   }

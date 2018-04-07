@@ -57,6 +57,9 @@ export class UserModel extends BaseModel {
       DeletedOnUtc: this.DeletedOnUtc
     };
   }
+  insert() {
+    return super.insert(this.getData());
+  }
   save() {
     return super.save(this.getData());
   }

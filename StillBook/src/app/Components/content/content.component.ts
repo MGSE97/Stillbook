@@ -22,7 +22,8 @@ export class ContentComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.Articles = ArticleModel.find('/User/' + this.c.LoggedUser.uid + '/Articles', this.db, (ref: Reference) => ref);
+    this.Articles = ArticleModel.find(this.c.User.getPath() + '/' + this.c.User.Id + '/Article', this.db, (ref: Reference) => ref);
+    console.log(this.Articles);
   }
 
 }

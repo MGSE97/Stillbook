@@ -39,6 +39,9 @@ export class CommentModel extends BaseModel {
       User_Id: this.User_Id
     };
   }
+  insert() {
+    return super.insert(this.getData());
+  }
   save() {
     return super.save(this.getData());
   }
