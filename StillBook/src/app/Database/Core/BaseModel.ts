@@ -45,7 +45,7 @@ export class BaseModel implements IBaseModel {
       if (found != null) {
         return found.map((value: T, index: number) => {
             return value;
-          })
+          });
       } else {
         return null;
       }
