@@ -3,6 +3,7 @@ import { UserState, UserRole } from './UserEnums';
 import { IBaseEntity } from '../../Database/Core/IBaseEntity';
 import { FirebaseDatabase } from '../../Database/Engine/FirebaseDatabase';
 import { Reference } from '@firebase/database-types';
+import { ArticleModel } from '../Article/Article';
 
 export class UserModel extends BaseModel {
   NickName: string;
@@ -11,6 +12,7 @@ export class UserModel extends BaseModel {
   Role: UserRole;
   RegistredOnUtc: string;
   DeletedOnUtc: string;
+  Articles: ArticleModel[];
 
   public static find(path: string, db: FirebaseDatabase, params: (ref: Reference) => any): UserModel[] {
     const found = super.find(path, db, params);

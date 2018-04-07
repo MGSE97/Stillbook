@@ -14,6 +14,7 @@ export interface IBaseEntity {
   Parent: IBaseEntity;
   Reference: AngularFireObject<{}>;
 
+  getParent(): IBaseEntity;
   getPath(): string;
   save(data: any);
   update(data: any);

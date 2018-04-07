@@ -32,9 +32,9 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ContentComponent } from './Components/content/content.component';
 import { ArticleComponent } from './Components/article/article.component';
-import { ArticleCommentComponent } from './Components/article/article-comment/article-comment.component';
 
 import { FirebaseDatabase } from './Database/Engine/FirebaseDatabase';
+import { ArticleEditComponent } from './Components/article-edit/article-edit.component';
 
 const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
   providers: [
@@ -58,7 +58,7 @@ const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
     FooterComponent,
     ContentComponent,
     ArticleComponent,
-    ArticleCommentComponent
+    ArticleEditComponent
   ],
   imports: [
     BrowserModule,

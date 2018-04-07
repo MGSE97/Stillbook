@@ -1,5 +1,5 @@
 <ul class="{{Class}}">
-    <li *ngFor="let item of MenuItems | async" class="{{item.Class | async}} {{((item == MenuItemSelected)?'active':'')}}">
-        <a routerLink="/{{item.Link | async}}">{{item.Text | async}}</a>
+    <li *ngFor="let item of MenuItems | async" class="{{item.Class | async}}" [ngClass]="{ 'active': item == MenuItemSelected }">
+        <a routerLink="/{{item.Link | async}}" (click)="(MenuItemSelected = item)">{{item.Text | async}}</a>
     </li>
 </ul>

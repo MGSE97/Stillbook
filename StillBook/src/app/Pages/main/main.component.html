@@ -1,12 +1,12 @@
-<div class="wrapper">
+<div class="wrapper" style="height: auto; min-height: 100%;">
     <aside class="main-sidebar no-padding">
         <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar" style="padding-top: 10px">
             <!-- Menu Switches -->
-            <app-menu [MenuItemsData]="TopMenuItems" [Class]="'nav nav-tabs'"></app-menu>
+            <app-menu [MenuItemsData]="TopMenuItems" [Class]="'nav nav-tabs'" [MenuItemSelectedData]="TopMenuSelected"></app-menu>
 
             <!-- Sidebar Menu -->
-            <app-menu [MenuItemsData]="NavMenuItems" [Class]="'sidebar-menu'"></app-menu>
+            <app-menu [MenuItemsData]="NavMenuItems" [Class]="'sidebar-menu'" [MenuItemSelectedData]="NavMenuSelected"></app-menu>
             <!-- /.sidebar-menu -->
         </section>
         <!-- /.sidebar -->
@@ -17,5 +17,5 @@
 
     <!-- Add the sidebar's background. This div must be placed
   immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
+    <!-- <div class="control-sidebar-bg"></div> -->
 </div>

@@ -3,6 +3,7 @@ import { IBaseModel, IBaseEntity } from './IBaseEntity';
 import { Reference } from '@firebase/database-types';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireObject } from 'angularfire2/database';
+import { RElement } from '@angular/core/src/render3/renderer';
 
 export class BaseModel implements IBaseModel {
   public Id: string;
@@ -30,9 +31,24 @@ export class BaseModel implements IBaseModel {
 
   public getPath(): string {
     if (this.Parent != null) {
-      return this.Parent.getPath() + '/' + this.Table;
+      return this.Parent.getPath() + '/' + this.Parent.Id + '/' + this.Table;
     } else {
       return this.Table;
+    }
+  }
+
+  public getParent<T>(): T {
+    if (this.Path != null) {
+      const parts = this.Path.split('/');
+      parts.pop();
+      const found = BaseModel.find(parts.join('/'), this.db, (ref: Reference) => ref);
+      if (found != null) {
+        return found.map((value: T, index: number) => {
+            return value;
+          })
+      } else {
+        return null;
+      }
     }
   }
 

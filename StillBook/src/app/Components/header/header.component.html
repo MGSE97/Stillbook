@@ -3,24 +3,29 @@
 
     <!-- Header Navbar -->
     <nav class="navbar" role="navigation">
-        <!-- Sidebar toggle button-->
-        <button class="sidebar-toggle btn btn-flat" data-toggle="push-menu" role="button">
-  <span class="sr-only">Toggle navigation</span>
-</button>
-        <!-- Logo -->
-        <a href="/home" class="navbar-brand">
-            <!-- logo for regular state and mobile devices -->
-            <span class="navbar-brand-lg">
+        <div class="col-1">
+            <!-- Sidebar toggle button-->
+            <button class="sidebar-toggle btn btn-flat" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </button></div>
+        <div class="col-2">
+            <!-- Logo -->
+            <a href="/home" class="navbar-brand">
+                <!-- logo for regular state and mobile devices -->
+                <span class="navbar-brand-lg">
     <b>Tech</b>Book</span>
-        </a>
-        <!-- SearchBox -->
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
-            </div>
-        </form>
+            </a>
+        </div>
+        <div class="col-8">
+            <!-- SearchBox -->
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+                </div>
+            </form>
+        </div>
         <!-- Navbar Right Menu -->
-        <div class="navbar-custom-menu">
+        <div class="navbar-custom-menu col-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown user user-menu">
                     <a href="/home" class="dropdown-toggle" data-toggle="dropdown">

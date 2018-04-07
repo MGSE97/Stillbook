@@ -14,13 +14,15 @@ export class MainComponent implements OnInit {
 
   public LoggedUser: User;
 
+  public TopMenuSelected = 0;
   public TopMenuItems = [
-    new MenuItem({Text: 'Menu', Class: 'active'}),
+    new MenuItem({Text: 'Menu'}),
     new MenuItem({Text: 'Chat'}),
     new MenuItem({Text: 'Events'}),
   ];
+  public NavMenuSelected = 0;
   public NavMenuItems = [
-    new MenuItem({Text: 'A', Class: 'active'}),
+    new MenuItem({Text: 'A'}),
     new MenuItem({Text: 'B'}),
     new MenuItem({Text: 'C'}),
   ];

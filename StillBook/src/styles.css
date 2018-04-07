@@ -2,6 +2,9 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
 @import "~firebaseui/dist/firebaseui.css";
+@import "~ionicons/dist/css/ionicons.css";
+@import "assets/dist/css/AdminLTE.min.css";
+@import "skin-blue.css";
 body {
   background: #282828;
   background: -moz-radial-gradient(center, ellipse cover, #282828 0%, #878787 100%);

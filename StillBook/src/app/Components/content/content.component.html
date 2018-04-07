@@ -1,6 +1,11 @@
 <div class="content-wrapper">
     <!-- Main content -->
     <section class="content container-fluid">
-        content works!
+        <app-article-edit></app-article-edit>
+        <ng-template *ngFor="let article of Articles">
+            <div class="col-12">
+                <app-article [ArticleModel]="article"></app-article>
+            </div>
+        </ng-template>
     </section>
 </div>
