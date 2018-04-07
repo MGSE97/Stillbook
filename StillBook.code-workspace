@@ -2,6 +2,15 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "D:\\Dokumenty\\Web\\Design\\techbook\\AlfaMain\\dist"
+		},
+		{
+			"path": "D:\\Dokumenty\\Web\\Design\\techbook\\AlfaMain\\plugins"
+		},
+		{
+			"path": "D:\\Dokumenty\\Web\\Design\\techbook\\AlfaMain\\bower_components"
 		}
 	],
 	"settings": {

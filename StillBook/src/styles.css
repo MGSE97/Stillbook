@@ -2,3 +2,10 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
 @import "~firebaseui/dist/firebaseui.css";
+body {
+  background: #282828;
+  background: -moz-radial-gradient(center, ellipse cover, #282828 0%, #878787 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #282828 0%, #878787 100%);
+  background: radial-gradient(ellipse at center, #282828 0%, #878787 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#282828', endColorstr='#878787', GradientType=1);
+}

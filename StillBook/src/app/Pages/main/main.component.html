@@ -1,6 +1,21 @@
-<p>
-    articles works!
-</p>
-<p>
-    {{LoggedUser.displayName}} <br> {{LoggedUser.email}} <br> {{LoggedUser.uid}} <br>
-</p>
+<div class="wrapper">
+    <aside class="main-sidebar no-padding">
+        <!-- sidebar: style can be found in sidebar.less -->
+        <section class="sidebar" style="padding-top: 10px">
+            <!-- Menu Switches -->
+            <app-menu [MenuItemsData]="TopMenuItems" [Class]="'nav nav-tabs'"></app-menu>
+
+            <!-- Sidebar Menu -->
+            <app-menu [MenuItemsData]="NavMenuItems" [Class]="'sidebar-menu'"></app-menu>
+            <!-- /.sidebar-menu -->
+        </section>
+        <!-- /.sidebar -->
+    </aside>
+    <app-header></app-header>
+    <app-content></app-content>
+    <app-footer></app-footer>
+
+    <!-- Add the sidebar's background. This div must be placed
+  immediately after the control sidebar -->
+    <div class="control-sidebar-bg"></div>
+</div>

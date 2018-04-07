@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
 
   logout() {
     this.afAuth.auth.signOut();
+    this.router.navigate(['login']);
   }
 
   successCallback(data: FirebaseUISignInSuccess) {

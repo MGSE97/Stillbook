@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Observable } from 'rxjs/observable';
-import { MenuItemComponent } from '../menu-item/menu-item.component';
+import { Observable } from 'rxjs/Observable';
+import { MenuItem } from './menu-item';
 
 @Component({
   selector: 'app-menu',
@@ -9,8 +9,10 @@ import { MenuItemComponent } from '../menu-item/menu-item.component';
 })
 export class MenuComponent implements OnInit {
 
-  @Input() MenuItems: Observable<MenuItemComponent[]>;
-  MenuItemsData: MenuItemComponent[];
+   MenuItems: Observable<MenuItem[]>;
+   @Input() MenuItemsData: MenuItem[];
+   @Input() Class: string;
+   MenuItemSelected: Observable<MenuItem>;
 
   constructor() { }
 
@@ -18,7 +20,7 @@ export class MenuComponent implements OnInit {
     this.MenuItems = Observable.of(this.MenuItemsData);
   }
 
-  addItem(item: MenuItemComponent) {
+  addItem(item: MenuItem) {
     this.MenuItemsData.push(item);
   }
 

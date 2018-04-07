@@ -29,7 +29,6 @@ import { LoginComponent } from './Pages/login/login.component';
 
 import { HeaderComponent } from './Components/header/header.component';
 import { MenuComponent } from './Components/menu/menu.component';
-import { MenuItemComponent } from './Components/menu-item/menu-item.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { ContentComponent } from './Components/content/content.component';
 import { ArticleComponent } from './Components/article/article.component';
@@ -56,7 +55,6 @@ const firebaseUiAuthConfig: FirebaseUIAuthConfig = {
     LoginComponent,
     HeaderComponent,
     MenuComponent,
-    MenuItemComponent,
     FooterComponent,
     ContentComponent,
     ArticleComponent,
